@@ -23,7 +23,12 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
@@ -31,12 +36,28 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Logs -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.5</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <!-- add tests with these tags-->
+                    <groups>assumptions, assertions</groups>
+                    <!-- exclude tests with these tags-->
+                    <!--<excludedGroups>assertions, myTestSuite</excludedGroups>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

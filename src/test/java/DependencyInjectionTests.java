@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Dependency Injection Test Suite")
-class DependencyInjection {
+class DependencyInjectionTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Conditionals.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConditionalsTests.class);
 
-    DependencyInjection(TestInfo testInfo) {
+    DependencyInjectionTests(TestInfo testInfo) {
         assertEquals("Dependency Injection Test Suite", testInfo.getDisplayName());
     }
 

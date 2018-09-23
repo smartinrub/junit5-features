@@ -3,11 +3,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
-class BasicFeatures {
+class BasicFeaturesTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(BasicFeatures.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BasicFeaturesTests.class);
 
     @BeforeAll
     static void initAll() {
@@ -16,7 +15,7 @@ class BasicFeatures {
 
     @BeforeEach
     void init() {
-        LOGGER.info("@BeforeEach runs before each test");
+LOGGER.info("@BeforeEach runs before each test");
     }
 
     @AfterAll
@@ -39,10 +38,4 @@ class BasicFeatures {
     void successfulTest() {
         assertTrue(2 < 5);
     }
-
-    @Test
-    void failTest() {
-        fail("failing test");
-    }
-
 }

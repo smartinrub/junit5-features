@@ -5,9 +5,9 @@ import org.junit.jupiter.api.condition.EnabledIf;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class Conditionals {
+class ConditionalsTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Conditionals.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConditionalsTests.class);
 
     private static int counter = 0;
 

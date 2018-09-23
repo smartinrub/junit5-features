@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @DisplayName("Display name test suite")
-class DisplayNames {
+class DisplayNamesTests {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DisplayName.class);
 

@@ -29,7 +29,7 @@ interface Interfaces {
 
 }
 
-class ClassImplementingInterface implements Interfaces {
+class ClassImplementingInterfaceTests implements Interfaces {
 
     @Test
     void myTest() {

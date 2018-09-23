@@ -1,17 +1,15 @@
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.DisabledOnOs;
-import org.junit.jupiter.api.condition.OS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assumptions.assumeFalse;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
-import static org.junit.jupiter.api.Assumptions.assumingThat;
+import static org.junit.jupiter.api.Assumptions.*;
 
-class Assumptions {
+@Tag("assumptions")
+class AssumptionsTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Assumptions.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AssumptionsTests.class);
 
     @Test
     void trueAssumption() {

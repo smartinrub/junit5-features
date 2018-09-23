@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,9 +12,10 @@ import java.util.stream.Stream;
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Assertions {
+@Tag("assertions")
+class AssertionsTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Assertions.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AssertionsTests.class);
 
     @Test
     void lambdaAssertionWithMessage() {
@@ -77,17 +80,10 @@ class Assertions {
     }
 
     @Test
+    @Disabled
     void timeoutExceeded() {
         LOGGER.info("Assertion fails with exceeded timeout of 2ms by 8ms");
         assertTimeout(Duration.ofMillis(2), () -> {
-            sleep(10);
-        });
-    }
-
-    @Test
-    void timeoutExceededWithPreemptiveTermination() {
-        LOGGER.info("Assertion fails with exceeded timeout of 2ms by 8ms");
-        assertTimeoutPreemptively(Duration.ofMillis(2), () -> {
             sleep(10);
         });
     }

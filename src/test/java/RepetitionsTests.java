@@ -4,7 +4,7 @@ import org.junit.jupiter.api.RepetitionInfo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Repetitions {
+class RepetitionsTests {
 
     private static int repetition = 1;
 
