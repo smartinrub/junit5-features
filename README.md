@@ -3,9 +3,9 @@
 ## Content
 1. Basic Features
 2. Display Names
-3. AssertionsTests
-4. AssumptionsTests
-5. ConditionalsTests
+3. Assertions
+4. Assumptions
+5. Conditionals
 6. Tags
 7. Nested
 8. Dependency Injection
