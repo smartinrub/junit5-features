@@ -11,3 +11,4 @@
 8. Dependency Injection
 9. Interfaces
 10. Repetitions
+11. Parameterized Tests
