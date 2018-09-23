@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -14,8 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("assertions")
 class AssertionsTests {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(AssertionsTests.class);
 
     @Test
     void lambdaAssertionWithMessage() {
@@ -80,9 +76,8 @@ class AssertionsTests {
     }
 
     @Test
-    @Disabled
+    @Disabled("Assertion fails with exceeded timeout of 2ms by 8ms")
     void timeoutExceeded() {
-        LOGGER.info("Assertion fails with exceeded timeout of 2ms by 8ms");
         assertTimeout(Duration.ofMillis(2), () -> {
             sleep(10);
         });

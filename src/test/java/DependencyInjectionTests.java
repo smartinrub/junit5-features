@@ -1,6 +1,4 @@
 import org.junit.jupiter.api.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Dependency Injection Test Suite")
 class DependencyInjectionTests {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(ConditionalsTests.class);
 
     DependencyInjectionTests(TestInfo testInfo) {
         assertEquals("Dependency Injection Test Suite", testInfo.getDisplayName());
@@ -40,7 +36,7 @@ class DependencyInjectionTests {
 
     @Test
     void testReporterString(TestReporter testReporter) {
-        LOGGER.info("Use test reporter to print information to stout or stderr");
+        // Use test reporter to print information to stout or stderr
         testReporter.publishEntry("my message");
     }
 

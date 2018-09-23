@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assumptions.*;
@@ -9,7 +7,6 @@ import static org.junit.jupiter.api.Assumptions.*;
 @Tag("assumptions")
 class AssumptionsTests {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AssumptionsTests.class);
 
     @Test
     void trueAssumption() {
@@ -19,7 +16,7 @@ class AssumptionsTests {
 
     @Test
     void trueAssumptionTestIsSkippedAndExceptionIsThrown() {
-        LOGGER.info("When assume fails test is skipped and TestAbortedException is thrown");
+        // When assume fails, test is skipped and TestAbortedException is thrown
         assumeTrue(2 < 1, () -> "Skipping test");
         assertEquals(7, 3 + 3);
     }
@@ -32,7 +29,7 @@ class AssumptionsTests {
 
     @Test
     void failFalseAssumptionTestIsSkippedAndExceptionIsThrown() {
-        LOGGER.info("When assume fails test is skipped and TestAbortedException is thrown");
+        // When assume fails, test is skipped and TestAbortedException is thrown
         assumeFalse(1 < 2, "Skipping test");
         assertEquals(7, 2 + 3);
     }
@@ -48,7 +45,7 @@ class AssumptionsTests {
 
     @Test
     void failAssumptionThatTestPass() {
-        LOGGER.info("When assume fails test pass");
+        // When assume fails, test pass
         String word = "word";
         assumingThat(
                 "hello".equals(word),
