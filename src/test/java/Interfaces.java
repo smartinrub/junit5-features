@@ -3,9 +3,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS) // it needs to be added to make @BeforeAll and @AfterAll work
-interface InterfacesAndDefaultMethods {
+interface Interfaces {
 
-    Logger LOGGER = LoggerFactory.getLogger(InterfacesAndDefaultMethods.class);
+    Logger LOGGER = LoggerFactory.getLogger(Interfaces.class);
 
     @BeforeAll
     default void initAll() {
@@ -29,7 +29,7 @@ interface InterfacesAndDefaultMethods {
 
 }
 
-class TestImplementingInterfaceWithDefaultMethods implements InterfacesAndDefaultMethods {
+class ClassImplementingInterface implements Interfaces {
 
     @Test
     void myTest() {
